@@ -7,7 +7,7 @@ var personModel = {
   addPerson: function(newNameString) {
     var message = '';
     if (typeof newNameString == 'string') {
-      personModel.DB[this.nextID] = { name: newNameString };
+      personModel.DB[this.nextID] = { name: newNameString, id: this.nextID };
       message = personModel.DB[this.nextID].name + 'successfully added';
       this.nextID++;
     } else {
